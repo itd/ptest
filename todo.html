@@ -15,7 +15,7 @@
         {action: "collect tickets", done: true},
         {action: "call jason", done: false}
       ]
-    }
+    };
 
     var todoApp = angular.module("todoApp", []);
 
@@ -27,8 +27,8 @@
               resutlArr.push(item);
             }
           }
-        )
-      }
+        );
+      };
     });
     todoApp.controller("ToDoCtrl", function ($scope) {
 
@@ -37,7 +37,7 @@
       $scope.incompleteCount = function () {
         var count = 0;
         angular.forEach($scope.todo.items, function (item) {
-          if (!item.done) {count++}
+          if (!item.done) {count++};
         });
         return count;
       };

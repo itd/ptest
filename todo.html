@@ -21,13 +21,13 @@
 
     todoApp.filter ("checkedItems", function () {
       return function (items, showComplete) {
-        var resutlArr = [];
+        var resultArr = [];
         angular.forEach(items, function (item) {
             if (item.done == false || showComplete ==true) {
-              resutlArr.push(item);
+              resultArr.push(item);
             }
-          }
-        );
+          });
+        return resultArr;
       };
     });
     todoApp.controller("ToDoCtrl", function ($scope) {
@@ -37,8 +37,10 @@
       $scope.incompleteCount = function () {
         var count = 0;
         angular.forEach($scope.todo.items, function (item) {
-          if (!item.done) {count++};
-        });
+          if (!item.done) {
+            count++;
+          }
+          });
         return count;
       };
 

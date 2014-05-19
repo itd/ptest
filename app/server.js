@@ -1,5 +1,5 @@
 var connect = require('connect');
 connect.createServer(
-    connect.static("../")
+    connect.static("./")
 ).listen(5000);
 

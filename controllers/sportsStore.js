@@ -1,6 +1,5 @@
-"use strict";
-
-angular.module("sportsStore").controller("sportsStoreCtrl", function ($scope) {
+angular.module("sportsStore")
+  .controller("sportsStoreCtrl", function ($scope) {
     $scope.data = { products: [
       { name: "Product #1", description: "A product", category: "Category #1", price: 100 },
       { name: "Product #2", description: "A product", category: "Category #1", price: 110 },
